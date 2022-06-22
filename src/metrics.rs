@@ -5,6 +5,7 @@ pub mod exemplar;
 pub mod family;
 pub mod gauge;
 pub mod histogram;
+pub mod summary;
 pub mod info;
 
 /// A metric that is aware of its Open Metrics metric type.
@@ -19,9 +20,9 @@ pub enum MetricType {
     Histogram,
     Info,
     Unknown,
+    Summary,
     // Not (yet) supported metric types.
     //
     // GaugeHistogram,
     // StateSet,
-    // Summary
 }

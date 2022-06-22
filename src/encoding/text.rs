@@ -184,6 +184,7 @@ impl Encode for MetricType {
             MetricType::Histogram => "histogram",
             MetricType::Info => "info",
             MetricType::Unknown => "unknown",
+            MetricType::Summary => "summary",
         };
 
         writer.write_all(t.as_bytes())?;
@@ -602,6 +603,7 @@ where
         Self::TYPE
     }
 }
+
 
 #[cfg(test)]
 mod tests {
